@@ -1,0 +1,3 @@
+url = jbdc://mysql://localhost/test
+username = root
+password = smuzi
