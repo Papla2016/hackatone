@@ -83,6 +83,8 @@ body {
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
     transition-duration: .25s;
     text-align: right;
+    border-left: 7px white solid;
+    backdrop-filter: blur(16px);
 }
    
 .menu-item {
@@ -90,15 +92,21 @@ body {
     padding: 12px 24px;
     color: #6c6c6c;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 600;
     text-decoration: none;
     transition-duration: .25s;
     justify-content: right;
     padding-right: 30px;
+    border-right: 4px #6c6c6c solid;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all .4s;
 }
 .menu-item:hover {
     color: white;
+    margin-right: 5px;
+    border-right: 4px #ffffff solid;
 }
      
 #menu-toggle{
