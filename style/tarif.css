@@ -6,28 +6,29 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: "IBM Plex Sans";
-
 }
 
 body {
-    background: rgb(36, 35, 35);
+    background: linear-gradient( rgb(9, 9, 9), rgb(26, 26, 26));
 }
 
-*,html * override x.xhtml.ru style {
+*, html * {
     scrollbar-width: thin;
 }
-  
-*::-webkit-scrollbar, html *::-webkit-scrollbar {
-    height: 12px;
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
     width: 10px;
+    height: 12px;
 }
 
-  
-*::-webkit-scrollbar-thumb, html *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
     background-color: #3c3d3d;
     border-radius: 5px;
     border: 3px solid rgb(20, 20, 20);
 }
+
 
 
 
@@ -42,6 +43,7 @@ body {
     position: absolute;
     top: 0;
 }
+
 
 .header-logo > h1 {
     color: #E8E8E8;
@@ -103,8 +105,10 @@ body {
     transition-duration: .25s;
     text-align: right;
     border-left: 7px white solid;
-    
+    backdrop-filter: blur(16px);
 }
+
+
    
 .menu-item {
     display: flex;
@@ -123,9 +127,14 @@ body {
     transition: all .4s;
 }
 
+.menu-item:current {
+    color: #ffffff;
+}
+
+
 .menu-item:hover {
     color: white;
-    margin-right: 5px;
+    margin-right: 25px;
     border-right: 4px #ffffff solid;
 }
      
@@ -149,64 +158,101 @@ body {
     right: 0;
 }
 
-.header-main {
-    width: 100wv;
-    height: 100vh;
-    position: relative;
-    z-index: -2;
-    padding: 40px 100px;
-    overflow: hidden;
-
-}
-
-#myVideo {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.main-info {
-    max-width: 70%;
-    z-index: 1; 
-}
-
-.main-info > h3 {
-    color: #FFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: "IBM Plex Sans";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 240px;
-}
-
-.main-info > hr{
-    margin-top: 20px;
-}
-
-.map {
-    color: white;
-    margin-top: 150px;
-    padding: 0px 45px;
+.tarif {
+    margin: 150px 0px 90px 0px;
     text-align: center;
+    padding: 0px 35px;
 }
 
-.map > h1 {
-    font-size: 50px;
+.tarif > h1 {
+    color: #ffffff;
+    font-size: 70px;
+    margin-bottom: 50px;
 }
 
-.map > p {
-    margin: 25px 0px;
+.tarif-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarif-box {
+    color: rgb(255, 255, 255);
+    border: 2px white solid;
+    border-radius: 20px;
+    width: 450px;
+    padding: 60px 30px;
+    transition: all .50s;
+}
+
+.tarif-box:hover {
+    color:  black;
+    background: white;
+}
+
+
+.h3 {
     font-size: 35px;
 }
 
-#map-show {
-    width: 600px;
-    height: 400px;
+.tarif-box > img {
+    margin: 20px auto 40px auto;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    text-align: center;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+}
 
+
+.tarif-box > p {
+    font-size: 20px;
+    opacity: 0.8;
+    padding: 40px 15px;
+}
+
+.tarif-box:hover img {
+    filter: brightness(0) invert(0); 
+}
+
+.btn {
+    padding: 10px 60px;
+    background: whitesmoke;
+    border-radius: 10px;
+    color: #3c3d3d;
+    text-decoration: none;
+    transition: .20s;
+    border: 2px #3c3d3d solid;
+}
+
+.btn:hover {
+    background: #3c3d3d;
+    color: white;
+    border: 2px white solid;
+}
+
+.modal {
+    background: #3b3b3b;
+    width: 500px;
+    height: 350px;
+
+}
+
+.modal > .amod {
+    border: 2px white solid;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    padding: 20px 45px;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    transition: all .50s;
+}
+
+.modal > .amod:hover {
+    background: white;
+    color: #3c3d3d;
 }

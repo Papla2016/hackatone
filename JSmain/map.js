@@ -28,3 +28,4 @@ async function initMap() {
     // Добавляем слой для отображения схематической карты
     map.addChild(new YMapDefaultSchemeLayer());
 }
+
