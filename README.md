@@ -1,2 +1,2 @@
 # hackatone
-repository for hakatone
+Открывать нужно папку Cosmic View
