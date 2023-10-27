@@ -15,13 +15,14 @@ body {
 
 .header {
     padding: 10px 25px; 
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.553);
     max-height: 100%;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    position: absolute;
     z-index: 3 !important;
+    position: absolute;
+    top: 0;
 }
 
 .header-logo > h1 {
@@ -83,6 +84,8 @@ body {
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
     transition-duration: .25s;
     text-align: right;
+    border-left: 7px white solid;
+    
 }
    
 .menu-item {
@@ -90,15 +93,21 @@ body {
     padding: 12px 24px;
     color: #6c6c6c;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 600;
     text-decoration: none;
     transition-duration: .25s;
     justify-content: right;
     padding-right: 30px;
+    border-right: 4px #6c6c6c solid;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all .4s;
 }
 .menu-item:hover {
     color: white;
+    margin-right: 5px;
+    border-right: 4px #ffffff solid;
 }
      
 #menu-toggle{
@@ -161,6 +170,13 @@ body {
     margin-top: 20px;
 }
 
-.container {
+.map {
     color: white;
+    margin-top: 150px;
+    padding: 0px 45px;
+}
+
+.map > h1 {
+    text-align: center;
+    font-size: 50px;
 }
