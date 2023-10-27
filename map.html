@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/map.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <h1>Cosmic View</h1>
+            </div>
+            <div class="burger-menu">
+                <input id="menu-toggle" type="checkbox" />
+                    <label class="menu-btn" for="menu-toggle">
+                        <span></span>
+                    </label>        
+                <ul class="menubox">
+                    <li><a class="menu-item" href="header.html">О нас</a></li>
+                    <li><a class="menu-item" href="map.html">Карта</a></li>
+                    <li><a class="menu-item" href="tarif.html">Тариф</a></li>
+                </ul>
+            </div>
+        </div>    
+        <div class="map">
+            <h1>Карта</h1>
+            <p>ЭТо наша карта посомтртите на неё</p>
+            <div id="map-show"></div>
+            <button class="btn wh"><a href="#ex1" rel="modal:open">Купить</a></button>
+        </div>
+    
+    
+    
+        <div class="tarif">
+            <div class="tarif-box">
+                <h3 class="h3 one">Тариф 1</h3>
+                <p>Описание тарифа 1</p>
+            </div>
+            <div class="tarif-box">
+                <h3 class="h3 two">Тариф 2</h3>
+                <p>Описание тарифа 2</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="ex1" class="modal">
+        <p>Thanks for clicking. That felt good.</p>
+        <a href="#" rel="modal:close">Close</a>
+    </div>
+
+
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=a5e9635b-cd8a-4f67-935a-4b593649f173&lang=ru_RU"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JSmain/map.js"></script>
+</body>
+</html>

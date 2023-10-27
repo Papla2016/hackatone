@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/tarif.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <h1>Cosmic View</h1>
+        </div>
+        <div class="burger-menu">
+            <input id="menu-toggle" type="checkbox" />
+                <label class="menu-btn" for="menu-toggle">
+                    <span></span>
+                </label>        
+            <ul class="menubox">
+                <li><a class="menu-item" href="header.html">О нас</a></li>
+                <li><a class="menu-item" href="map.html">Карта</a></li>
+                <li><a class="menu-item" href="tarif.html">Тариф</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tarif">
+            <h1  data-aos="zoom-in" data-aos-duration="1000"  class="h1">Тарифы</h1>
+            <div class="tarif-flex">
+                <div class="tarif-box" data-aos="flip-right" data-aos-duration="2000">
+                    <h3 class="h3">Стандарт</h3>
+                    <p>Доступ к фотографиям низкой четкости, сделанным за последние 48 часов.
+                        Получают возможность просмотра “горячей точки” в режиме реального времени.
+                        Реклама на портале
+                    </p>
+                    <img class="one" src="https://cdn-icons-png.flaticon.com/128/1830/1830749.png" alt="#">
+                    <a href="map.html" class="btn">Перейти</a>
+                </div>
+                <div class="tarif-box" data-aos="flip-right" data-aos-duration="2500">
+                    <h3 class="h3" >VIP</h3>
+                    <p>Ограниченное количество снимков в сутки, дополнительные снимки за определённую плату.
+                        Возможность получения снимков конкретной области в  высоком разрешении.
+                        Отключение рекламы  
+                    </p>
+                    <img src="https://cdn-icons-png.flaticon.com/128/1570/1570905.png" alt="#">
+                    <a href="#" class="btn">Купить / 650₽</a>
+                </div>
+                <div class="tarif-box" data-aos="flip-right" data-aos-duration="3000">
+                    <h3 class="h3" >Бизнес</h3>
+                    <p>Предоставление возможности непрерывного мониторинга определённой области.
+                        Количество снимков обсуждается напрямую с заказчиком.
+                        Стоимость обсуждается с заказчиком.  
+                    </p>
+                    <img src="https://cdn-icons-png.flaticon.com/128/2667/2667414.png" alt="#">
+                    <a href="#ex1" rel="modal:open" class="btn">Контакты</a>
+                </div>
+            </div>
+    </div>
+
+    <div id="ex1" class="modal">
+        <a class="amod" href="tel:+79040812151">Телефон</a>
+        <a class="amod" href="mailto:papla2016@yandex.ru">Почта</a>
+        <a class="amod" href="https://vk.com/papla2016">ВК</a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JSmain/tarif.js"></script>
+</body>
+</html>
