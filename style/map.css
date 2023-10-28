@@ -1,63 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-*, *::before, *::after {
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "IBM Plex Sans";
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 body {
-    background: linear-gradient( rgb(9, 9, 9), rgb(26, 26, 26));
+    background: linear-gradient(rgb(9, 9, 9), rgb(26, 26, 26));
 }
 
-*, html * {
-    scrollbar-width: thin;
+a {
+    text-decoration: none;
 }
-
-*::-webkit-scrollbar,
-html *::-webkit-scrollbar {
-    width: 10px;
-    height: 12px;
-}
-
-*::-webkit-scrollbar-thumb,
-html *::-webkit-scrollbar-thumb {
-    background-color: #3c3d3d;
-    border-radius: 5px;
-    border: 3px solid rgb(20, 20, 20);
-}
-
-
 
 .header {
-    padding: 10px 25px; 
+    padding: 10px 25px;
     background: rgba(0, 0, 0, 0.553);
     max-height: 100%;
     display: flex;
     justify-content: space-between;
     width: 100%;
     z-index: 3 !important;
-    position: absolute;
+    position: fixed;
     top: 0;
 }
-
 
 .header-logo > h1 {
     color: #E8E8E8;
     font-family: "Iceland";
     font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .burger-menu {
     padding: 0px 25px;
 }
 
-.menu-btn{
+.menu-btn {
     display: flex;
     align-items: center;
     position: absolute;
@@ -68,7 +49,7 @@ html *::-webkit-scrollbar-thumb {
     cursor: pointer;
     z-index: 99999999;
 }
-   
+
 .menu-btn > span,
 .menu-btn > span::before,
 .menu-btn > span::after {
@@ -79,16 +60,18 @@ html *::-webkit-scrollbar-thumb {
     background-color: #ffffff;
     transition-duration: .25s;
 }
+
 .menu-btn > span::before {
     content: '';
     top: -8px;
 }
+
 .menu-btn > span::after {
     content: '';
     top: 8px;
 }
-   
-.menubox{
+
+.menubox {
     display: block;
     position: fixed;
     visibility: hidden;
@@ -107,8 +90,6 @@ html *::-webkit-scrollbar-thumb {
     backdrop-filter: blur(16px);
 }
 
-
-   
 .menu-item {
     display: flex;
     padding: 12px 24px;
@@ -130,106 +111,231 @@ html *::-webkit-scrollbar-thumb {
     color: #ffffff;
 }
 
-
 .menu-item:hover {
     color: white;
     margin-right: 25px;
     border-right: 4px #ffffff solid;
 }
-     
-#menu-toggle{
+
+#menu-toggle {
     opacity: 0;
 }
-   
-#menu-toggle:checked ~ .menu-btn > span{
+
+#menu-toggle:checked ~ .menu-btn > span {
     transform: rotate(45deg);
 }
-#menu-toggle:checked ~ .menu-btn > span::before{
+
+#menu-toggle:checked ~ .menu-btn > span::before {
     top: 0;
     transform: rotate(0);
 }
-#menu-toggle:checked ~ .menu-btn > span::after{
+
+#menu-toggle:checked ~ .menu-btn > span::after {
     top: 0;
     transform: rotate(90deg);
 }
-#menu-toggle:checked ~ .menubox{
+
+#menu-toggle:checked ~ .menubox {
     visibility: visible;
     right: 0;
 }
 
-.header-main {
-    width: 100wv;
-    height: 100vh;
-    position: relative;
-    z-index: -2;
-    padding: 40px 100px;
-    overflow: hidden;
-
-}
-
-#myVideo {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.main-info {
-    max-width: 70%;
-    z-index: 1; 
-}
-
-.main-info > h3 {
-    color: #FFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: "IBM Plex Sans";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 240px;
-}
-
-.main-info > hr{
-    margin-top: 20px;
-}
-
 .map {
-    color: white;
-    margin-top: 150px;
-    padding: 0px 45px;
     text-align: center;
+    padding: 150px 0 90px;
+    color: #ffffff;
 }
 
 .map > h1 {
-    font-size: 50px;
+    font-size: 70px;
+    margin-bottom: 50px;
 }
 
 .map > p {
-    margin: 25px 0px;
-    font-size: 35px;
+    font-size: 30px;
+    margin-bottom: 50px;
 }
 
 #map-show {
-    width: 600px;
-    height: 400px;
-
-}
-
-
-.tarif-box {
-    background-color: #3c3d3d;
+    margin: 25px auto;
+    max-width: 70%;
+    height: 500px;
     border-radius: 20px;
-    width: 450px;
-    padding: 60px 30px;
-    color: white;
-    transition: color 0.3s; /* Плавный переход цвета текста */
 }
 
-.tarif-box:hover {
+#ex1 {
+    background: #717070;
+    width: 400px;
+    height: 350px;
+}
+
+#ex1 .amod {
+    border: 2px white solid;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    padding: 20px 45px;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    transition: all 0.50s;
+}
+
+#ex1 .amod:hover {
     background: white;
-    color: black; /* Цвет текста при наведении (черный) */
+    color: #3c3d3d;
+}
+
+.btn {
+    padding: 10px 60px;
+    background: whitesmoke;
+    border-radius: 10px;
+    color: #3c3d3d;
+    text-decoration: none;
+    transition: 0.20s;
+    border: 2px #3c3d3d solid;
+}
+
+.btn > a {
+    color: #3c3d3d;
+}
+
+.btn:hover {
+    background: #3c3d3d;
+    color: white;
+    border: 2px white solid;
+}
+
+/* Адаптивные стили для меньших экранов */
+@media (max-width: 768px) {
+    .header-logo > h1 {
+        font-size: 40px;
+    }
+
+    .menu-item {
+        font-size: 30px;
+    }
+
+    .map > h1 {
+        font-size: 50px;
+    }
+
+    .map > p {
+        font-size: 20px;
+    }
+
+    #map-show {
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .burger-menu {
+        padding: 0px 25px;
+    }
+    
+    .menu-btn{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 99999999;
+    }
+       
+    .menu-btn > span,
+    .menu-btn > span::before,
+    .menu-btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        transition-duration: .25s;
+    }
+    .menu-btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu-btn > span::after {
+        content: '';
+        top: 8px;
+    }
+       
+    .menubox{
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        width: 100%;
+        right: -100%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background: rgba(0, 0, 0, 0.50);
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+        text-align: right;
+        border-left: 7px white solid;
+        backdrop-filter: blur(16px);
+    }
+    
+    
+       
+    .menu-item {
+        display: flex;
+        padding: 12px 24px;
+        color: #6c6c6c;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+        justify-content: right;
+        padding-right: 30px;
+        border-right: 4px #6c6c6c solid;
+        margin-right: 20px;
+        margin-top: 20px;
+        transition: all .4s;
+    }
+    
+    .menu-item:current {
+        color: #ffffff;
+    }
+    
+    
+    .menu-item:hover {
+        color: white;
+        margin-right: 25px;
+        border-right: 4px #ffffff solid;
+    }
+         
+    #menu-toggle{
+        opacity: 0;
+    }
+       
+    #menu-toggle:checked ~ .menu-btn > span{
+        transform: rotate(45deg);
+    }
+    #menu-toggle:checked ~ .menu-btn > span::before{
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu-toggle:checked ~ .menu-btn > span::after{
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu-toggle:checked ~ .menubox{
+        visibility: visible;
+        right: 0;
+    }
+
+    .modal {
+        background: #717070;
+        width: 400px;
+        height: 350px;
+    }
 }

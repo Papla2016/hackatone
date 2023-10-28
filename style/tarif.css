@@ -2,16 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 *, *::before, *::after {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "IBM Plex Sans";
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 body {
-    background: linear-gradient( rgb(9, 9, 9), rgb(26, 26, 26));
+    background: linear-gradient(rgb(9, 9, 9), rgb(26, 26, 26));
 }
 
+/* Scrollbar styles */
 *, html * {
     scrollbar-width: thin;
 }
@@ -29,31 +30,27 @@ html *::-webkit-scrollbar-thumb {
     border: 3px solid rgb(20, 20, 20);
 }
 
-
-
-
 .header {
-    padding: 10px 25px; 
+    padding: 10px 25px;
     background: rgba(0, 0, 0, 0.553);
     max-height: 100%;
     display: flex;
     justify-content: space-between;
     width: 100%;
     z-index: 3 !important;
-    position: absolute;
+    position: fixed; /* Fixed header for better visibility */
     top: 0;
 }
 
+/* Header styles */
 
 .header-logo > h1 {
     color: #E8E8E8;
     font-family: "Iceland";
     font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
+/* Add mobile-friendly styles for the menu button */
 .burger-menu {
     padding: 0px 25px;
 }
@@ -158,10 +155,11 @@ html *::-webkit-scrollbar-thumb {
     right: 0;
 }
 
+/* Styles for the "Тариф" section */
 .tarif {
-    margin: 150px 0px 90px 0px;
+    margin: 150px 0 90px;
     text-align: center;
-    padding: 0px 35px;
+    padding: 0 35px;
 }
 
 .tarif > h1 {
@@ -171,25 +169,24 @@ html *::-webkit-scrollbar-thumb {
 }
 
 .tarif-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Добавлено: используем flex контейнер */
+    justify-content: space-between; /* Добавлено: расстояние между блоками */
 }
 
 .tarif-box {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     border: 2px white solid;
     border-radius: 20px;
-    width: 450px;
+    width: 30%; /* Ширина блоков тарифов */
     padding: 60px 30px;
-    transition: all .50s;
+    transition: all 0.50s;
+    margin: 10px; /* Добавлено: отступ между блоками */
 }
 
 .tarif-box:hover {
-    color:  black;
+    color: black;
     background: white;
 }
-
 
 .h3 {
     font-size: 35px;
@@ -199,13 +196,10 @@ html *::-webkit-scrollbar-thumb {
     margin: 20px auto 40px auto;
     width: 100px;
     height: 100px;
-    align-items: center;
-    text-align: center;
     display: block;
     filter: brightness(0) invert(1);
     transition: filter 0.3s;
 }
-
 
 .tarif-box > p {
     font-size: 20px;
@@ -214,16 +208,17 @@ html *::-webkit-scrollbar-thumb {
 }
 
 .tarif-box:hover img {
-    filter: brightness(0) invert(0); 
+    filter: brightness(0) invert(0);
 }
 
+/* Styles for the "Get Started" button */
 .btn {
     padding: 10px 60px;
     background: whitesmoke;
     border-radius: 10px;
     color: #3c3d3d;
     text-decoration: none;
-    transition: .20s;
+    transition: 0.20s;
     border: 2px #3c3d3d solid;
 }
 
@@ -233,11 +228,11 @@ html *::-webkit-scrollbar-thumb {
     border: 2px white solid;
 }
 
+/* Styles for the modal */
 .modal {
     background: #3b3b3b;
     width: 500px;
     height: 350px;
-
 }
 
 .modal > .amod {
@@ -249,10 +244,139 @@ html *::-webkit-scrollbar-thumb {
     display: block;
     margin-top: 30px;
     text-align: center;
-    transition: all .50s;
+    transition: all 0.50s;
 }
 
 .modal > .amod:hover {
     background: white;
     color: #3c3d3d;
+}
+
+/* Responsive styles for the "Тариф" section */
+@media (max-width: 1464px) {
+    .tarif {
+        max-width: 100%;
+    }
+    
+    .tarif-flex {
+        display: block;
+        text-align: center; /* Center the content for smaller screens */
+    }
+    
+    .tarif-box {
+        width: 100%; /* Allow the box to take the full width */
+        margin: 20px auto; /* Center the box horizontally */
+    }
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        padding: 0px 25px;
+    }
+    
+    .menu-btn{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 99999999;
+    }
+       
+    .menu-btn > span,
+    .menu-btn > span::before,
+    .menu-btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        transition-duration: .25s;
+    }
+    .menu-btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu-btn > span::after {
+        content: '';
+        top: 8px;
+    }
+       
+    .menubox{
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        width: 100%;
+        right: -100%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background: rgba(0, 0, 0, 0.50);
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+        text-align: right;
+        border-left: 7px white solid;
+        backdrop-filter: blur(16px);
+    }
+    
+    
+       
+    .menu-item {
+        display: flex;
+        padding: 12px 24px;
+        color: #6c6c6c;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+        justify-content: right;
+        padding-right: 30px;
+        border-right: 4px #6c6c6c solid;
+        margin-right: 20px;
+        margin-top: 20px;
+        transition: all .4s;
+    }
+    
+    .menu-item:current {
+        color: #ffffff;
+    }
+    
+    
+    .menu-item:hover {
+        color: white;
+        margin-right: 25px;
+        border-right: 4px #ffffff solid;
+    }
+         
+    #menu-toggle{
+        opacity: 0;
+    }
+       
+    #menu-toggle:checked ~ .menu-btn > span{
+        transform: rotate(45deg);
+    }
+    #menu-toggle:checked ~ .menu-btn > span::before{
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu-toggle:checked ~ .menu-btn > span::after{
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu-toggle:checked ~ .menubox{
+        visibility: visible;
+        right: 0;
+    }
+
+    .modal {
+        background: #717070;
+        width: 400px;
+        height: 350px;
+    }
 }

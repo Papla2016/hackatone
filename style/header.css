@@ -41,6 +41,7 @@ html *::-webkit-scrollbar-thumb {
     z-index: 3 !important;
     position: absolute;
     top: 0;
+    align-items: center;
 }
 
 
@@ -195,4 +196,115 @@ html *::-webkit-scrollbar-thumb {
 
 .main-info > hr{
     margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .menu-item {
+        font-size: 30px;
+        padding: 10px 20px;
+        padding-right: 25px;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+
+    .menubox {
+        width: 100%;
+        padding: 60px 0;
+    }
+
+    .main-info {
+        max-width: 100%;
+        z-index: 1; 
+    }
+
+    .main-info > h3 {
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: "IBM Plex Sans";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 120px;
+        text-align: center;
+    }
+
+    .header-main {
+        width: 100wv;
+        height: 100vh;
+        position: relative;
+        z-index: -2;
+        padding: 40px 50px;
+    }
+
+    .header-logo > h1 {
+        color: #E8E8E8;
+        font-family: "Iceland";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        align-items: center;
+    }
+
+    .menu-btn {
+        top: 20px;
+        right: 15px;
+    }
+
+    
+    
+}
+
+@media (max-width: 364px) {
+    .main-info > h3 {
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: "IBM Plex Sans";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 120px;
+        text-align: center;
+    }
+
+    .header-main {
+        width: 100wv;
+        height: 100vh;
+        position: relative;
+        z-index: -2;
+        padding: 40px 100px;
+    
+    }
+
+    .header-main {
+        width: 100wv;
+        height: 100vh;
+        position: relative;
+        z-index: -2;
+        padding: 30px 15px;
+    }
+
+    .header-logo > h1 {
+        color: #E8E8E8;
+        font-family: "Iceland";
+        font-size: 41px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        align-items: center;
+    }
+}
+
+@media (max-height: 402px) {
+    .header-main {
+        width: 100wv;
+        height: 100vh;
+        position: relative;
+        z-index: -2;
+        padding: 30px 15px;
+        overflow: visible;
+    }
 }
