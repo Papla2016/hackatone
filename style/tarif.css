@@ -380,3 +380,11 @@ html *::-webkit-scrollbar-thumb {
         height: 350px;
     }
 }
+
+@media (max-width: 450px) {
+    .modal {
+        background: #717070;
+        width: 300px;
+        height: 350px;
+    }
+}
