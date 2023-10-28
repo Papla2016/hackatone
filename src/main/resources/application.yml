@@ -1,0 +1,24 @@
+spring:
+  mvc:
+    log-request-details: true
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        "globally_quoted_identifiers": "true"
+  datasource:
+    url: "jdbc:postgresql://db.pyjaeqqzzkwppksgkbrb.supabase.co:5432/postgres?user=postgres&password=lJwUJR18BCViuxFDn1Xs"
+    username: "postgres"
+    password: lJwUJR18BCViuxFDn1Xs
+  database:
+    driverClassName: org.Postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+logging:
+  level:
+    web: "DEBUG"
+server:
+  port: 808
